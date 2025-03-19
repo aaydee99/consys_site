@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 180 100% 36%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-sm;
+  }
+
+  .glass-card {
+    @apply bg-white bg-opacity-80 backdrop-blur-sm border border-gray-200 rounded-lg shadow-sm;
+  }
+
+  .service-card {
+    @apply p-6 rounded-lg border border-gray-200 transition-all duration-300 hover:shadow-md hover:border-teal-300 cursor-pointer bg-white h-full;
+  }
+
+  .service-card-selected {
+    @apply border-teal-500 shadow-md bg-teal-50;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-2 font-heading;
+  }
+
+  .section-subtitle {
+    @apply text-gray-600 text-lg mb-12 max-w-3xl mx-auto;
+  }
+
+  .section-tag {
+    @apply inline-block px-3 py-1 text-xs font-medium text-teal-800 bg-teal-100 rounded-full mb-4;
+  }
+
+  .expertise-icon-container {
+    @apply flex items-center justify-center w-16 h-16 rounded-full bg-teal-100 text-teal-600 mb-4;
+  }
+}
+
+.reveal-animation > * {
+  opacity: 0;
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+.reveal-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.reveal-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.reveal-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.reveal-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.reveal-animation > *:nth-child(5) { animation-delay: 0.5s; }
+
+.stagger-animation > * {
+  opacity: 0;
+  animation: fade-right 0.5s ease-out forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+
+.service-image {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Hero image animation */
+.hero-image {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Form focus effects */
+input:focus, textarea:focus, select:focus {
+  @apply ring-2 ring-teal-300 outline-none;
+  transition: all 0.2s ease;
+}
+
+/* Card hover effect */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
