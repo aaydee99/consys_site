@@ -85,24 +85,6 @@ const Footer = () => {
                   <span>Our Projects</span>
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  <span>Careers</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  <span>News & Articles</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  <span>Privacy Policy</span>
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -114,13 +96,13 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="text-teal-400 mr-3 mt-1" />
                 <span className="text-gray-400">
-                  Block F, Blue Area, Islamabad, Pakistan
+                Gulshan View Society, Lahore, Pakistan
                 </span>
               </li>
               <li className="flex items-start">
                 <Phone size={18} className="text-teal-400 mr-3 mt-1" />
                 <span className="text-gray-400">
-                  +92 51 1234567
+                  +92 333 216 4161
                 </span>
               </li>
               <li className="flex items-start">

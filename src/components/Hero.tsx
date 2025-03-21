@@ -23,12 +23,10 @@ const Hero = () => {
             <span className="section-tag">Expert & Professional</span>
           </div>
           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-            Expert Surveying & Engineering Solutions Across Pakistan
+          Engineering the Future: Comprehensive Civil, Electrical, HVAC, and IT Expertise
           </h1>
           <p className={`text-lg text-gray-100 mb-8 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-            We're bringing a unique approach to surveying in the Middle East and South Asia. 
-            Our team of experienced engineers and surveyors delivers precise, reliable results 
-            with state-of-the-art equipment.
+          We are a dynamic, full-service company delivering cutting-edge solutions across civil engineering, electrical systems, HVAC, and IT infrastructure. From designing and constructing robust foundations to powering efficient buildings and integrating smart technology, we bring expertise, reliability, and innovation to every project. Our integrated approach ensures seamless performance, sustainability, and excellence, shaping the future of modern environments.
           </p>
           <div className={`flex flex-wrap gap-4 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
             <a 
