@@ -5,23 +5,23 @@ const locations = [
   {
     id: 'islamabad',
     name: 'Islamabad',
-    address: 'Block F, Blue Area, Islamabad, Pakistan',
-    phone: '+92 51 1234567',
+    address: '1/1-A, Askari Towers 1, Sector D, DHA 2',
+    phone: '+92 333 2164161',
     email: 'islamabad@consys.com'
-  },
-  {
-    id: 'abu_dhabi',
-    name: 'Abu Dhabi',
-    address: 'Al Muroor Road, Abu Dhabi, UAE',
-    phone: '+971 2 1234567',
-    email: 'abudhabi@consys.com'
   },
   {
     id: 'lahore',
     name: 'Lahore',
-    address: 'Gulberg III, Lahore, Pakistan',
+    address: 'House No 28, Gulshan View Society, Eden Cottage Road, New Allama Iqbal Park',
     phone: '+92 42 1234567',
     email: 'lahore@consys.com'
+  },
+  {
+    id: 'karachi',
+    name: 'Karachi',
+    address: 'D-104, Chapal Super Luxury Apartments, Block 13, Gulistan-e-Jauhar',
+    phone: '+92 21 1234567',
+    email: 'karachi@consys.com'
   }
 ];
 
@@ -32,23 +32,13 @@ const Map = () => {
         <div className="text-center mb-12">
           <h2 className="section-title">Our Offices</h2>
           <p className="section-subtitle">
-            Visit us at one of our offices across Pakistan and UAE
+            Visit us at one of our offices across Pakistan 
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <div className="lg:col-span-3 rounded-lg overflow-hidden h-[400px] bg-gray-200">
-            {/* Map placeholder - in a real app, this would be replaced with an actual map integration */}
-            <div className="h-full w-full flex items-center justify-center bg-gray-200">
-              <img 
-                src="https://maps.googleapis.com/maps/api/staticmap?center=Islamabad,Pakistan&zoom=5&size=800x400&markers=color:red%7CIslamabad,Pakistan&markers=color:red%7CAbu+Dhabi,UAE&markers=color:red%7CLahore,Pakistan&key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"
-                alt="Office Locations Map"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+        <div className="flex lg:flex-row flex-col gap-6">
 
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4">
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {locations.map((location) => (
               <div key={location.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h3 className="text-xl font-bold mb-2">{location.name}</h3>

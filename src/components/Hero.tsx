@@ -23,7 +23,7 @@ const Hero = () => {
             <span className="section-tag">Expert & Professional</span>
           </div>
           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-            Expert Surveying & Engineering Solutions Across UAE & Pakistan
+            Expert Surveying & Engineering Solutions Across Pakistan
           </h1>
           <p className={`text-lg text-gray-100 mb-8 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
             We're bringing a unique approach to surveying in the Middle East and South Asia. 

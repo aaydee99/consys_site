@@ -1,30 +1,29 @@
-
-import { Users, Map, Award, Cpu } from 'lucide-react';
+import { Users, Map, Award, Cpu, Building2, CircuitBoard, AirVent } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const expertiseItems = [
   {
-    id: 'team',
-    title: 'Expert Technical Team',
-    description: 'Our team includes highly qualified surveyors, engineers, and technicians with extensive field experience and specialized expertise.',
-    icon: <Users className="w-8 h-8" />
+    id: 'civil',
+    title: 'Civil Engineering Expertise',
+    description: 'Our team excels in delivering large-scale civil projects, including high rise buildings, water supply systems, and infrastructure development, with a focus on durability and compliance.',
+    icon: <Building2 className="w-8 h-8" />
   },
   {
-    id: 'geo',
-    title: 'Geophysical & Mineral Exploration Specialists',
-    description: 'We employ leading geologists and exploration experts who understand complex terrains and resource identification challenges.',
-    icon: <Map className="w-8 h-8" />
+    id: 'electrical',
+    title: 'Electrical Systems Specialists',
+    description: 'We specialize in high and low voltage installations, building automation systems, and specialized lighting, ensuring safety, efficiency, and innovation in every project.',
+    icon: <CircuitBoard className="w-8 h-8" />
   },
   {
-    id: 'professionals',
-    title: 'Highly Qualified Professionals',
-    description: 'Our staff holds advanced degrees (BSc, MSc, PhD, and specialized certifications) in relevant engineering and geological disciplines.',
-    icon: <Award className="w-8 h-8" />
+    id: 'hvac',
+    title: 'HVAC Design & Implementation Experts',
+    description: 'Our HVAC professionals design and install energy-efficient heating, ventilation, and air conditioning systems tailored for residential, commercial, and industrial spaces.',
+    icon: <AirVent className="w-8 h-8" />
   },
   {
-    id: 'equipment',
-    title: 'Advanced Equipment & Data Expertise',
-    description: 'We utilize cutting-edge surveying equipment, drones, and specialized software to deliver superior results with exceptional accuracy.',
+    id: 'it',
+    title: 'IT & Telecom Infrastructure Proficiency',
+    description: 'We provide cutting-edge IT and telecommunication solutions, including network installations and smart building integrations, to support modern infrastructure needs.',
     icon: <Cpu className="w-8 h-8" />
   }
 ];
@@ -56,13 +55,13 @@ const Expertise = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 bg-white" ref={sectionRef}>
+    <section id="whyChooseUs" className="py-20 bg-white" ref={sectionRef}>
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="section-tag">Why Choose Us</span>
             <h2 className="section-title">
-              Experts with 40+ Years of Experience
+              Experts with 18+ Years of Experience
             </h2>
             <p className="section-subtitle">
               With decades of combined experience, our team brings unparalleled expertise to every project,

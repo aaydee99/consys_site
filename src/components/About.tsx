@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 bg-white" id='about'>
     <div className="container mx-auto px-6">
       <div className="text-center">
         <span className="section-tag">About Us</span>
@@ -10,7 +10,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <div className="text-left">
             <p className="text-gray-700 mb-6">At CONSYS, we take pride in our team of highly skilled Professional Engineers and Managers with over 12 years of experience in the construction industry. Specializing in the construction of buildings, roads, sewerage systems, and water supply projects, our team brings expertise and precision to every project. </p>
-            <p className="text-gray-700 mb-6">Our leadership is spearheaded by Engr. Tahir Yousaf, a Civil Engineer with 26 years of experience, who serves as the company's major shareholder. Alongside him, Mr. Mirza Azhar Baig (MBA) plays a crucial role as the General Manager and managing partner, ensuring operational excellence and strategic growth.</p>
+            <p className="text-gray-700 mb-6">Our leadership is spearheaded by Engr. Tahir Yousaf, a Civil Engineer with 26 years of experience, who serves as the company's major shareholder. Alongside him, Mr. Mirza Azhar Baig plays a crucial role as the General Manager and managing partner, ensuring operational excellence and strategic growth.</p>
             <p className="text-gray-700 mb-6">At CONSYS, we are committed to maintaining professionalism and innovation in construction and management. Our well-knit team stays ahead of the curve with modern construction practices, ensuring quality and efficiency in every project.</p>
             <p className="text-gray-700 mb-6">Additionally, we collaborate with specialized equipment providers to meet the unique demands of each project. Our company-owned equipment is also listed in our brochure, demonstrating our capability to handle projects with cutting-edge resources and industry expertise.</p>
             <p className="text-gray-700 mb-6">Driven by excellence, integrity, and innovation, CONSYS continues to build a better future—one project at a time.</p>

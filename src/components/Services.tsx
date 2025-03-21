@@ -1,47 +1,50 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { MapPin, Ruler, Building, ArrowRight } from 'lucide-react';
+import { AirVent, CircuitBoard, Building, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const services = [
   {
-    id: 'surveying',
-    title: 'Surveying and Mapping of Real-Estate',
-    description: 'We provide comprehensive surveying and mapping services for real estate properties using advanced technologies and methodologies.',
-    icon: <MapPin className="w-8 h-8" />,
-    details: [
-      "We work with you to clearly understand the purpose of mapping your property and guide you through the process.",
-      "Clearly defined objectives lead to optimized survey methodologies and outputs tailored to your specific needs.",
-      "Our teams deliver accurate surveys for property registration, development planning, and dispute resolution.",
-      "We provide detailed analysis and consulting based on survey results to help you make informed decisions."
-    ],
-    color: 'bg-blue-50 text-blue-700 border-blue-200'
-  },
-  {
-    id: 'mining',
-    title: 'Mining and Geological Surveys',
-    description: 'Specialized geological surveys for mining operations, resource estimation, and site assessment using advanced techniques.',
-    icon: <Ruler className="w-8 h-8" />,
-    details: [
-      "We conduct detailed geological assessments to identify mineral resources and evaluate mining potential.",
-      "Our mining surveys provide accurate volume calculations, pit designs, and operational planning assistance.",
-      "We use advanced technologies for underground mapping and structural analysis.",
-      "Our reports include comprehensive data analysis and recommendations for efficient resource extraction."
-    ],
-    color: 'bg-green-50 text-green-700 border-green-200'
-  },
-  {
-    id: 'training',
-    title: 'Training & Consultancy',
-    description: 'Professional training programs and consultancy services for engineering and surveying professionals and organizations.',
+    id: 'civil',
+    title: 'Civil Works',
+    description: 'Comprehensive civil engineering services for infrastructure development, construction, and project management.',
     icon: <Building className="w-8 h-8" />,
     details: [
-      "We offer specialized training programs for surveying professionals and engineering teams.",
-      "Our consultancy services provide expert guidance on project planning and implementation.",
-      "We help organizations develop internal capabilities for surveying and engineering projects.",
-      "Our team provides ongoing support and mentorship for professional development."
+      "We provide end-to-end civil engineering solutions for residential, commercial, and industrial projects.",
+      "Our services include structural design, foundation work, and construction supervision.",
+      "We ensure compliance with local regulations and industry standards.",
+      "Our team delivers detailed planning and execution for durable and sustainable infrastructure."
     ],
-    color: 'bg-purple-50 text-purple-700 border-purple-200'
+    color: 'bg-blue-50 text-blue-700 border-blue-200',
+    image: 'https://plus.unsplash.com/premium_photo-1663090226912-511b20a3f8a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    id: 'electrical',
+    title: 'Electrical Works',
+    description: 'Expert electrical engineering services for power systems, installations, and maintenance.',
+    icon: <CircuitBoard className="w-8 h-8" />,
+    details: [
+      "We design and implement electrical systems for buildings and facilities.",
+      "Our services cover wiring, lighting, power distribution, and safety systems.",
+      "We provide testing, maintenance, and upgrade solutions for existing electrical infrastructure.",
+      "Our team ensures energy efficiency and compliance with electrical codes."
+    ],
+    color: 'bg-green-50 text-green-700 border-green-200',
+    image: 'https://plus.unsplash.com/premium_photo-1664695710295-b524b34386db?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    id: 'hvac',
+    title: 'HVAC Works',
+    description: 'Specialized heating, ventilation, and air conditioning services for optimal indoor climate control.',
+    icon: <AirVent className="w-8 h-8" />,
+    details: [
+      "We design and install HVAC systems tailored to your specific needs.",
+      "Our services include system maintenance, repairs, and performance optimization.",
+      "We ensure energy-efficient solutions for residential and commercial properties.",
+      "Our team provides expert consultation for improving air quality and comfort."
+    ],
+    color: 'bg-purple-50 text-purple-700 border-purple-200',
+    image: 'https://images.unsplash.com/photo-1615309662243-70f6df917b59?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   }
 ];
 
@@ -143,8 +146,8 @@ const Services = () => {
                   <ArrowRight size={16} className="ml-2" />
                 </a>
               </div>
-              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                <p className="text-gray-500 italic">Service illustration placeholder</p>
+              <div>
+                <img src={currentService.image} alt="" className='rounded-lg max-h-72 w-full object-cover flex items-center justify-center'/>
               </div>
             </div>
           </div>

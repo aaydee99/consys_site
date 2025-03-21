@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-6 text-sm">
             <a href="tel:+923000000000" className="flex items-center space-x-2 hover:text-teal-300 transition-colors">
               <Phone size={14} />
-              <span>+92 300 0000000</span>
+              <span>+92 333 216 4161</span>
             </a>
             <a href="mailto:info@consys.com" className="flex items-center space-x-2 hover:text-teal-300 transition-colors">
               <Mail size={14} />
@@ -34,13 +34,13 @@ const Navbar = () => {
             </a>
             <div className="hidden md:flex items-center space-x-2">
               <MapPin size={14} />
-              <span>Islamabad, Pakistan</span>
+              <span>Lahore, Pakistan</span>
             </div>
           </div>
-          <div className="hidden sm:flex space-x-4">
+          {/* <div className="hidden sm:flex space-x-4">
             <a href="#" className="text-sm hover:text-teal-300 transition-colors">Careers</a>
             <a href="#" className="text-sm hover:text-teal-300 transition-colors">Support</a>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -55,9 +55,10 @@ const Navbar = () => {
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-10">
             <a href="#" className="text-gray-700 hover:text-teal-500 font-medium transition-colors">Home</a>
+            <a href="#about" className="text-gray-700 hover:text-teal-500 font-medium transition-colors">About Us</a>
             <a href="#services" className="text-gray-700 hover:text-teal-500 font-medium transition-colors">Services</a>
             <a href="#projects" className="text-gray-700 hover:text-teal-500 font-medium transition-colors">Projects</a>
-            <a href="#about" className="text-gray-700 hover:text-teal-500 font-medium transition-colors">About Us</a>
+            <a href="#whyChooseUs" className="text-gray-700 hover:text-teal-500 font-medium transition-colors">Why Choose Us?</a>
           </div>
 
           {/* Contact Button */}
@@ -84,7 +85,7 @@ const Navbar = () => {
             <a href="#" className="block py-2 text-gray-700 hover:text-teal-500 font-medium">Home</a>
             <a href="#services" className="block py-2 text-gray-700 hover:text-teal-500 font-medium">Services</a>
             <a href="#projects" className="block py-2 text-gray-700 hover:text-teal-500 font-medium">Projects</a>
-            <a href="#about" className="block py-2 text-gray-700 hover:text-teal-500 font-medium">About Us</a>
+            <a href="#about" className="block py-2 text-gray-700 hover:text-teal-500 font-medium">Why Choose Us?</a>
             <a href="#appointment" className="block py-3 px-4 bg-teal-500 text-white font-medium rounded-md text-center">
               Get a Free Quote
             </a>

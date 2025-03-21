@@ -44,31 +44,25 @@ const Footer = () => {
               <li>
                 <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
                   <ChevronRight size={16} className="mr-2" />
-                  <span>Surveying and Mapping</span>
+                  <span>Civil Works</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
                   <ChevronRight size={16} className="mr-2" />
-                  <span>Mining and Geological Surveys</span>
+                  <span>Electrical Works</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
                   <ChevronRight size={16} className="mr-2" />
-                  <span>Training & Consultancy</span>
+                  <span>HVAC Works</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
                   <ChevronRight size={16} className="mr-2" />
-                  <span>Equipment Calibration</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  <span>Data Processing & Analysis</span>
+                  <span>IT & Software Engineering</span>
                 </a>
               </li>
             </ul>

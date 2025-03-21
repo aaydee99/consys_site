@@ -190,9 +190,10 @@ const ContactForm = () => {
                     className="block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
                   >
                     <option value="" disabled>Select a service</option>
-                    <option value="surveying">Surveying and Mapping</option>
-                    <option value="mining">Mining and Geological Surveys</option>
-                    <option value="training">Training & Consultancy</option>
+                    <option value="civil">Civil Engineering Expertise</option>
+                    <option value="electrical">Electrical Systems Specialists</option>
+                    <option value="hvac">HVAC Design & Implementation Experts</option>
+                    <option value="it">IT & Telecom Infrastructure Proficiency</option>
                     <option value="other">Other Services</option>
                   </select>
                 </div>
