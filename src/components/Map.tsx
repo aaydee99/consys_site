@@ -5,23 +5,23 @@ const locations = [
   {
     id: 'islamabad',
     name: 'Islamabad',
-    address: '1/1-A, Askari Towers 1, Sector D, DHA 2',
+    address: 'Plot No 680, Street 25, Sector F-1, Bahria Town Phase 8',
     phone: '+92 333 2164161',
-    email: 'islamabad@consys.com'
+    email: 'consys.pk1@gmail.com'
   },
   {
     id: 'lahore',
     name: 'Lahore',
     address: 'House No 28, Gulshan View Society, Eden Cottage Road, New Allama Iqbal Park',
     phone: '+92 42 1234567',
-    email: 'lahore@consys.com'
+    email: 'consys.pk1@gmail.com'
   },
   {
     id: 'karachi',
     name: 'Karachi',
-    address: 'D-104, Chapal Super Luxury Apartments, Block 13, Gulistan-e-Jauhar',
+    address: 'Plot No #1, Precinct 32, Bahria Town',
     phone: '+92 21 1234567',
-    email: 'karachi@consys.com'
+    email: 'consys.pk1@gmail.com'
   }
 ];
 
