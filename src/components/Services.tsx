@@ -149,7 +149,7 @@ const Services = () => {
       <div
         key={service.id}
         className={cn(
-          "flex-shrink-0 w-[300px] h-[380px] bg-white p-5 rounded-lg border service-card hover:shadow-lg transition-all duration-300 cursor-pointer whitespace-normal break-words flex flex-col justify-between",
+          "flex-shrink-0 w-[300px] h-[300px] bg-white p-5 rounded-lg border service-card hover:shadow-lg transition-all duration-300 cursor-pointer whitespace-normal break-words flex flex-col justify-between",
           selectedService === service.id && "service-card-selected",
           isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}
@@ -181,9 +181,6 @@ const Services = () => {
     ))}
   </div>
 </div>
-
-
-
         {currentService && (
           <div className="mt-12 glass-card p-6 md:p-8 animate-fade-in">
             <h3 className="text-2xl font-bold mb-4">{currentService.title}</h3>
