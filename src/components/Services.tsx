@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { AirVent, CircuitBoard, Building, ArrowRight } from 'lucide-react';
+import { AirVent, CircuitBoard, Building, ArrowRight, Flame, Sun, ShieldCheck, MoveVertical } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const services = [
