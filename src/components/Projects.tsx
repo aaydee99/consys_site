@@ -330,7 +330,7 @@ const projects = [
   {
     id: 'project47',
     title: 'CCTV, LAN & WLAN System',
-    category: 'Electrical Works',
+    category: 'Security Works',
     description: 'Surveillance and networking systems including CCTV, LAN and WLAN. ',
     image: 'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=2070&auto=format',
     year: '2025'
@@ -370,7 +370,7 @@ const projects = [
   {
     id: 'project52',
     title: 'Solar Panel System',
-    category: 'Electrical Works',
+    category: 'Solar Works',
     description: 'Solar panels setup complete in all respects. ',
     image: 'https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?q=80&w=2070&auto=format',
     year: '2025'
@@ -522,7 +522,7 @@ const projects = [
 
 ];
 
-const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering', 'Fire Fighting Works'];
+const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering', 'Fire Fighting Works', 'Solar Works', 'Security Works'];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
