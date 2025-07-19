@@ -6,7 +6,7 @@ const locations = [
     id: 'islamabad',
     name: 'Islamabad',
     address: 'Plot No 680, Street 25, Sector F-1, Bahria Town Phase 8',
-    phone: '+92 333 2164161',
+    phone: '+92 332 8261692',
     email: 'consys.pk1@gmail.com'
   },
   {
