@@ -179,7 +179,7 @@ const projects = [
     id: 'project28',
     title: 'Sub-Base Course',
     category: 'Civil Works',
-    description: 'Sub-base course for Electric Bus Depot under eco-friendly bus project. Amount: Rs 2,698,337',
+    description: 'Sub-base course for Electric Bus Depot under eco-friendly bus project. ',
     image: 'https://images.unsplash.com/photo-1425342605259-25d80e320565?q=80&w=2070&auto=format&fit=crop',
     year: '2025'
   },
@@ -187,7 +187,7 @@ const projects = [
     id: 'project29',
     title: 'Earthwork and Allied Activities',
     category: 'Civil Works',
-    description: 'Earthwork and related civil tasks for the depot. Amount: Rs 20,648,441',
+    description: 'Earthwork and related civil tasks for the depot. ',
     image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format',
     year: '2025'
   },
@@ -195,7 +195,7 @@ const projects = [
     id: 'project30',
     title: 'Ancillary Works',
     category: 'Civil Works',
-    description: 'Ancillary infrastructure works for Electric Bus Depot. Amount: Rs 160,383,967',
+    description: 'Ancillary infrastructure works for Electric Bus Depot. ',
     image: 'https://images.unsplash.com/photo-1558690194-5aaa922b59b6?q=80&w=2071&auto=format',
     year: '2025'
   },
@@ -203,7 +203,7 @@ const projects = [
     id: 'project31',
     title: 'Surface Courses & Rigid Pavement',
     category: 'Civil Works',
-    description: 'Surface courses and rigid pavement for depot site. Amount: Rs 9,042,596',
+    description: 'Surface courses and rigid pavement for depot site. ',
     image: 'https://images.unsplash.com/photo-1425342605259-25d80e320565?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -211,7 +211,7 @@ const projects = [
     id: 'project32',
     title: 'Drainage Works',
     category: 'Civil Works',
-    description: 'Drainage systems setup for depot. Amount: Rs 21,868,386',
+    description: 'Drainage systems setup for depot. ',
     image: 'https://images.unsplash.com/photo-1614850523438-5eaa97a22e87?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -219,7 +219,7 @@ const projects = [
     id: 'project33',
     title: 'Sewerage Works',
     category: 'Civil Works',
-    description: 'Sewerage lines and structures for the depot. Amount: Rs 1,925,482',
+    description: 'Sewerage lines and structures for the depot.',
     image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format',
     year: '2025'
   },
@@ -227,7 +227,7 @@ const projects = [
     id: 'project34',
     title: 'Water Tanks',
     category: 'Civil Works',
-    description: 'Water tanks for depot water management. Amount: Rs 12,515,489',
+    description: 'Water tanks for depot water management. ',
     image: 'https://images.unsplash.com/photo-1591980734350-1129ee94e273?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -235,7 +235,7 @@ const projects = [
     id: 'project35',
     title: 'Water Supply & Distribution Network (Underground)',
     category: 'Civil Works',
-    description: 'Underground water supply network. Amount: Rs 11,413,047',
+    description: 'Underground water supply network. ',
     image: 'https://images.unsplash.com/photo-1558690194-5aaa922b59b6?q=80&w=2071&auto=format',
     year: '2025'
   },
@@ -243,7 +243,7 @@ const projects = [
     id: 'project36',
     title: 'Tube Well',
     category: 'Civil Works',
-    description: 'Tube well construction for water source. Amount: Rs 22,259,499',
+    description: 'Tube well construction for water source. ',
     image: 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -251,7 +251,7 @@ const projects = [
     id: 'project37',
     title: 'Main Depot Office Building',
     category: 'Civil Works',
-    description: 'Office building construction for Electric Bus Depot. Amount: Rs 261,422,198',
+    description: 'Office building construction for Electric Bus Depot. ',
     image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -259,7 +259,7 @@ const projects = [
     id: 'project38',
     title: 'Operator Building',
     category: 'Civil Works',
-    description: 'Operator building for depot operations. Amount: Rs 276,313,173',
+    description: 'Operator building for depot operations. ',
     image: 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -267,7 +267,7 @@ const projects = [
     id: 'project39',
     title: 'Watch Towers',
     category: 'Civil Works',
-    description: 'Security watch towers for Electric Bus Depot. Amount: Rs 1,462,158',
+    description: 'Security watch towers for Electric Bus Depot. ',
     image: 'https://images.unsplash.com/photo-1591980734350-1129ee94e273?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -275,7 +275,7 @@ const projects = [
     id: 'project40',
     title: 'Parking Sheds Civil Works',
     category: 'Civil Works',
-    description: 'Construction of parking sheds. Amount: Rs 17,138,206',
+    description: 'Construction of parking sheds. ',
     image: 'https://images.unsplash.com/photo-1425342605259-25d80e320565?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -283,7 +283,7 @@ const projects = [
     id: 'project41',
     title: 'Toilet Block',
     category: 'Civil Works',
-    description: 'Toilet block building works. Amount: Rs 123,118,692',
+    description: 'Toilet block building works.',
     image: 'https://images.unsplash.com/photo-1510877619479-2569d3c6e18f?q=80&w=2123&auto=format',
     year: '2025'
   },
@@ -291,7 +291,7 @@ const projects = [
     id: 'project42',
     title: 'Guard Rooms',
     category: 'Civil Works',
-    description: 'Guard accommodation structures. Amount: Rs 7,505,354',
+    description: 'Guard accommodation structures.',
     image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format',
     year: '2025'
   },
@@ -299,7 +299,7 @@ const projects = [
     id: 'project43',
     title: 'Electric Room & Meter Panel Room',
     category: 'Civil Works',
-    description: 'Electric and meter panel room construction. Amount: Rs 17,633,004',
+    description: 'Electric and meter panel room construction.',
     image: 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -307,7 +307,7 @@ const projects = [
     id: 'project44',
     title: 'Pump Room',
     category: 'Civil Works',
-    description: 'Pump room facility at the depot. Amount: Rs 1,598,151',
+    description: 'Pump room facility at the depot.',
     image: 'https://images.unsplash.com/photo-1558690194-5aaa922b59b6?q=80&w=2071&auto=format',
     year: '2025'
   },
@@ -315,7 +315,7 @@ const projects = [
     id: 'project45',
     title: 'Road Lighting Network (LED Fixtures)',
     category: 'Electrical Works',
-    description: 'LED road lighting system in depot area. Amount: Rs 15,093,827',
+    description: 'LED road lighting system in depot area. ',
     image: 'https://images.unsplash.com/photo-1510877619479-2569d3c6e18f?q=80&w=2123&auto=format',
     year: '2025'
   },
@@ -323,7 +323,7 @@ const projects = [
     id: 'project46',
     title: 'Electrification Works (Depot Area)',
     category: 'Electrical Works',
-    description: 'Complete external electrification of depot area. Amount: Rs 9,472,829',
+    description: 'Complete external electrification of depot area. ',
     image: 'https://images.unsplash.com/photo-1510877619479-2569d3c6e18f?q=80&w=2123&auto=format',
     year: '2025'
   },
@@ -331,7 +331,7 @@ const projects = [
     id: 'project47',
     title: 'CCTV, LAN & WLAN System',
     category: 'Electrical Works',
-    description: 'Surveillance and networking systems including CCTV, LAN and WLAN. Amount: Rs 75,587,443',
+    description: 'Surveillance and networking systems including CCTV, LAN and WLAN. ',
     image: 'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -339,7 +339,7 @@ const projects = [
     id: 'project48',
     title: 'Fire Fighting Works',
     category: 'Fire Fighting Works',
-    description: 'Fire fighting system at depot. Amount: Rs 53,771,800',
+    description: 'Fire fighting system at depot. ',
     image: 'https://images.unsplash.com/photo-1591980734350-1129ee94e273?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -347,7 +347,7 @@ const projects = [
     id: 'project49',
     title: 'Elevator',
     category: 'Electrical Works',
-    description: 'Elevator system installation for Electric Bus Depot. Amount: Rs 141,640,052',
+    description: 'Elevator system installation for Electric Bus Depot. ',
     image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format',
     year: '2025'
   },
@@ -355,7 +355,7 @@ const projects = [
     id: 'project50',
     title: 'HVAC System',
     category: 'Electrical Works',
-    description: 'Heating, ventilation and air conditioning setup. Amount: Rs 55,076,730',
+    description: 'Heating, ventilation and air conditioning setup. ',
     image: 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=2070&auto=format',
     year: '2025'
   },
@@ -363,7 +363,7 @@ const projects = [
     id: 'project51',
     title: 'Vehicle Washing Unit',
     category: 'Electrical Works',
-    description: 'Automated washing system for electric buses. Amount: Rs 43,288,494',
+    description: 'Automated washing system for electric buses. ',
     image: 'https://images.unsplash.com/photo-1558690194-5aaa922b59b6?q=80&w=2071&auto=format',
     year: '2025'
   },
@@ -371,7 +371,7 @@ const projects = [
     id: 'project52',
     title: 'Solar Panel System',
     category: 'Electrical Works',
-    description: 'Solar panels setup complete in all respects. Amount: Rs 108,628,000',
+    description: 'Solar panels setup complete in all respects. ',
     image: 'https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?q=80&w=2070&auto=format',
     year: '2025'
   },
