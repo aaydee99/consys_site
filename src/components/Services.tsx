@@ -45,8 +45,66 @@ const services = [
     ],
     color: 'bg-purple-50 text-purple-700 border-purple-200',
     image: 'https://images.unsplash.com/photo-1615309662243-70f6df917b59?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-  }
+  },
+  {
+  id: 'firefighting',
+  title: 'Fire Fighting Works',
+  description: 'Integrated fire protection systems to ensure life safety and property security.',
+  icon: <Flame className="w-8 h-8" />,
+  details: [
+    "We install fire suppression systems, including sprinklers, extinguishers, and hydrants.",
+    "Our solutions comply with international fire safety codes and local regulations.",
+    "We offer maintenance, inspections, and upgrades for firefighting equipment.",
+    "Our team designs systems tailored to commercial, industrial, and residential buildings."
+  ],
+  color: 'bg-red-50 text-red-700 border-red-200',
+  image: 'https://images.unsplash.com/photo-1615591271384-fd3b39c79e9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'
+},
+{
+  id: 'security',
+  title: 'Security Works',
+  description: 'Advanced surveillance and access control systems to safeguard your assets.',
+  icon: <ShieldCheck className="w-8 h-8" />,
+  details: [
+    "We install CCTV, access control, and alarm systems for 24/7 monitoring.",
+    "Our security solutions are scalable for residential, commercial, and industrial use.",
+    "We integrate smart technologies for real-time alerts and remote access.",
+    "Our services ensure physical and digital protection through expert deployment."
+  ],
+  color: 'bg-gray-50 text-gray-700 border-gray-200',
+  image: 'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'
+},
+{
+  id: 'solar',
+  title: 'Solar Works',
+  description: 'Sustainable solar energy solutions for clean, renewable power generation.',
+  icon: <Sun className="w-8 h-8" />,
+  details: [
+    "We design and install on-grid and off-grid solar systems.",
+    "Our services include site evaluation, system sizing, and net metering.",
+    "We provide solar panel cleaning, performance testing, and maintenance.",
+    "Our experts ensure maximum energy yield with smart solar technologies."
+  ],
+  color: 'bg-yellow-50 text-yellow-700 border-yellow-200',
+  image: 'https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'
+},
+{
+  id: 'elevator',
+  title: 'Elevator Works',
+  description: 'Reliable vertical transportation solutions for residential, commercial, and industrial buildings.',
+  icon: <MoveVertical className="w-8 h-8" />,
+  details: [
+    "We provide installation of passenger, freight, and panoramic elevators.",
+    "Our services include modernization, upgrades, and periodic inspections.",
+    "We follow international safety standards to ensure smooth and secure operation.",
+    "Our maintenance programs prevent breakdowns and extend system life."
+  ],
+  color: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+  image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'
+}
+
 ];
+
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(services[0].id);
