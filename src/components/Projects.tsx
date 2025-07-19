@@ -346,7 +346,7 @@ const projects = [
   {
     id: 'project49',
     title: 'Elevator',
-    category: 'Electrical Works',
+    category: 'Elevator Works',
     description: 'Elevator system installation for Electric Bus Depot. ',
     image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format',
     year: '2025'
@@ -522,7 +522,7 @@ const projects = [
 
 ];
 
-const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering', 'Fire Fighting Works', 'Solar Works', 'Security Works'];
+const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering', 'Fire Fighting Works', 'Solar Works', 'Security Works', 'Elevator Works'];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
