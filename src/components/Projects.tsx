@@ -522,7 +522,7 @@ const projects = [
 
 ];
 
-const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering', 'Fire Fighting Works];
+const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering', 'Fire Fighting Works'];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
