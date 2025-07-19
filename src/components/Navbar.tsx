@@ -26,11 +26,11 @@ const Navbar = () => {
           <div className="flex items-center space-x-6 text-sm">
             <a href="tel:+923000000000" className="flex items-center space-x-2 hover:text-teal-300 transition-colors">
               <Phone size={14} />
-              <span>+92 333 216 4161</span>
+              <span>+92 322 469 1111</span>
             </a>
             <a href="mailto:info@consys.com" className="flex items-center space-x-2 hover:text-teal-300 transition-colors">
               <Mail size={14} />
-              <span>info@consys.com</span>
+              <span>consys.pk1@gmail.com</span>
             </a>
             <div className="hidden md:flex items-center space-x-2">
               <MapPin size={14} />
