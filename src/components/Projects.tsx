@@ -338,7 +338,7 @@ const projects = [
   {
     id: 'project48',
     title: 'Fire Fighting Works',
-    category: 'Electrical Works',
+    category: 'Fire Fighting Works',
     description: 'Fire fighting system at depot. Amount: Rs 53,771,800',
     image: 'https://images.unsplash.com/photo-1591980734350-1129ee94e273?q=80&w=2070&auto=format',
     year: '2025'
@@ -458,7 +458,7 @@ const projects = [
   {
     id: 'project63',
     title: 'Volume and Fire Dampers',
-    category: 'HVAC Works',
+    category: 'Fire Fighting Works',
     description: 'Volume control dampers and fire dampers for complete HVAC system.',
     image: 'https://images.unsplash.com/photo-1591980734350-1129ee94e273?q=80&w=2070&auto=format',
     year: '2025'
@@ -522,7 +522,7 @@ const projects = [
 
 ];
 
-const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering'];
+const categories = ['All', 'Civil Works', 'Electrical Works', 'HVAC Works', 'IT & Software Engineering', 'Fire Fighting Works];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
