@@ -143,40 +143,40 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className={cn(
-                "service-card hover:shadow-lg transition-all duration-300 cursor-pointer",
-                selectedService === service.id && "service-card-selected",
-                isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-                { "transition-delay-100": index === 0 },
-                { "transition-delay-200": index === 1 },
-                { "transition-delay-300": index === 2 }
-              )}
-              style={{ transitionDelay: `${index * 100}ms` }}
-              onClick={() => setSelectedService(service.id)}
-            >
-              <div className={cn(
-                "w-16 h-16 rounded-full flex items-center justify-center mb-4",
-                service.color
-              )}>
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <button 
-              title='Button'
-                className="text-teal-600 font-medium flex items-center group"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedService(service.id);
-                }}
-              />
-            </div>
-          ))}
-        </div>
+       <div className="overflow-x-auto whitespace-nowrap py-6 px-2 space-x-4 flex">
+  {services.map((service, index) => (
+    <div
+      key={service.id}
+      className={cn(
+        "inline-block min-w-[300px] max-w-xs bg-white p-5 rounded-lg border service-card hover:shadow-lg transition-all duration-300 cursor-pointer",
+        selectedService === service.id && "service-card-selected",
+        isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      )}
+      style={{ transitionDelay: `${index * 100}ms` }}
+      onClick={() => setSelectedService(service.id)}
+    >
+      <div
+        className={cn(
+          "w-16 h-16 rounded-full flex items-center justify-center mb-4",
+          service.color
+        )}
+      >
+        {service.icon}
+      </div>
+      <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+      <p className="text-gray-600 mb-4">{service.description}</p>
+      <button
+        title="Button"
+        className="text-teal-600 font-medium flex items-center group"
+        onClick={(e) => {
+          e.stopPropagation();
+          setSelectedService(service.id);
+        }}
+      />
+    </div>
+  ))}
+</div>
+
 
         {currentService && (
           <div className="mt-12 glass-card p-6 md:p-8 animate-fade-in">
