@@ -149,31 +149,35 @@ const Services = () => {
       <div
         key={service.id}
         className={cn(
-          "flex-shrink-0 w-[300px] max-w-full bg-white p-5 rounded-lg border service-card hover:shadow-lg transition-all duration-300 cursor-pointer whitespace-normal break-words",
+          "flex-shrink-0 w-[300px] h-[420px] bg-white p-5 rounded-lg border service-card hover:shadow-lg transition-all duration-300 cursor-pointer whitespace-normal break-words flex flex-col justify-between",
           selectedService === service.id && "service-card-selected",
           isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}
         style={{ transitionDelay: `${index * 100}ms` }}
         onClick={() => setSelectedService(service.id)}
       >
-        <div
-          className={cn(
+        <div>
+          <div className={cn(
             "w-16 h-16 rounded-full flex items-center justify-center mb-4",
             service.color
-          )}
-        >
-          {service.icon}
+          )}>
+            {service.icon}
+          </div>
+          <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+          <p className="text-gray-600 mb-4 break-words whitespace-normal">
+            {service.description}
+          </p>
         </div>
-        <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-        <p className="text-gray-600 mb-4 break-words whitespace-normal">{service.description}</p>
         <button
           title="Button"
-          className="text-teal-600 font-medium flex items-center group"
+          className="text-teal-600 font-medium flex items-center group mt-auto"
           onClick={(e) => {
             e.stopPropagation();
             setSelectedService(service.id);
           }}
-        />
+        >
+          Learn more
+        </button>
       </div>
     ))}
   </div>
