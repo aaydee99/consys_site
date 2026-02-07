@@ -6,7 +6,7 @@ import DHA from '@/assets/dha.png'
 import PWD from '@/assets/pwd.png'
 const clientLogos = [
   {
-    id: 'FWP',
+    id: 'FWO',
     name: 'FWO',
     logo: FWO
   },

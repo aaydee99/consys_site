@@ -23,12 +23,21 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
+    const { name, email, phone, service, message } = formState;
+
+    const subject = encodeURIComponent(`Consultation Request from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\nMessage:\n${message}`
+    );
+
+    window.location.href = `mailto:tahir.yousaf@consyspk.com?subject=${subject}&body=${body}`;
+
+    // Show success state after a short delay to let the mail client open
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-      
+
       // Reset form after showing success message
       setTimeout(() => {
         setIsSubmitted(false);
@@ -40,7 +49,7 @@ const ContactForm = () => {
           message: '',
         });
       }, 5000);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -181,21 +190,26 @@ const ContactForm = () => {
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
                     Service Interested In
                   </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formState.service}
-                    onChange={handleChange}
-                    required
-                    className="block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
-                  >
-                    <option value="" disabled>Select a service</option>
-                    <option value="civil">Civil Engineering Expertise</option>
-                    <option value="electrical">Electrical Systems Specialists</option>
-                    <option value="hvac">HVAC Design & Implementation Experts</option>
-                    <option value="it">IT & Telecom Infrastructure Proficiency</option>
-                    <option value="other">Other Services</option>
-                  </select>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <CalendarIcon size={16} className="text-gray-400" />
+                    </div>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formState.service}
+                      onChange={handleChange}
+                      required
+                      className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 appearance-none bg-white"
+                    >
+                      <option value="" disabled>Select a service</option>
+                      <option value="civil">Civil Engineering Expertise</option>
+                      <option value="electrical">Electrical Systems Specialists</option>
+                      <option value="hvac">HVAC Design & Implementation Experts</option>
+                      <option value="it">IT & Telecom Infrastructure Proficiency</option>
+                      <option value="other">Other Services</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div>
