@@ -108,7 +108,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <Mail size={18} className="text-teal-400 mr-3 mt-1" />
                 <span className="text-gray-400">
-                  info@consys.com
+                  tahir.yousaf@consyspk.com
                 </span>
               </li>
             </ul>

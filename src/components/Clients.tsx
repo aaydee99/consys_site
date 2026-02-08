@@ -4,6 +4,7 @@ import FWO from '@/assets/fwo.png'
 import NLC from '@/assets/nlc.png'
 import DHA from '@/assets/dha.png'
 import PWD from '@/assets/pwd.png'
+import PAA from '@/assets/paa.png'
 const clientLogos = [
   {
     id: 'FWO',
@@ -24,7 +25,12 @@ const clientLogos = [
     id: 'Pak PWD',
     name: 'Pak PWD',
     logo: PWD
-  }
+  },
+  {
+    id: 'PAA',
+    name: 'PAA',
+    logo: PAA
+  },
 ];
 
 const Clients = () => {
