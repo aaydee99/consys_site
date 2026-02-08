@@ -22,7 +22,7 @@ const locations = [
     id: 'karachi',
     name: 'Karachi',
     address: 'Plot No #1, Precinct 32, Bahria Town',
-    phone: '+92 3125270696',
+    phone: '+92 312 527 0696',
     email: 'consys.pk1@gmail.com',
     email2: 'tahir.yousaf@consyspk.com'
   }
