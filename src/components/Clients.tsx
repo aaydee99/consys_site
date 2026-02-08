@@ -69,7 +69,7 @@ const Clients = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
           {clientLogos.map((client, index) => (
             <div 
               key={client.id}
