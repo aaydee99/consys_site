@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import ConsysLogo from '@/assets/consys-logo.png'
 
@@ -94,7 +94,7 @@ const Navbar = () => {
             <a href="/" onClick={(e) => handleNavClick(e)} className="text-gray-700 hover:text-teal-500 font-medium transition-colors cursor-pointer">Home</a>
             <a href="/#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-700 hover:text-teal-500 font-medium transition-colors cursor-pointer">About Us</a>
             <a href="/#services" onClick={(e) => handleNavClick(e, 'services')} className="text-gray-700 hover:text-teal-500 font-medium transition-colors cursor-pointer">Services</a>
-            <a href="/#projects" onClick={(e) => handleNavClick(e, 'projects')} className="text-gray-700 hover:text-teal-500 font-medium transition-colors cursor-pointer">Projects</a>
+            <Link to="/projects" className="text-gray-700 hover:text-teal-500 font-medium transition-colors">Projects</Link>
             <a href="/#whyChooseUs" onClick={(e) => handleNavClick(e, 'whyChooseUs')} className="text-gray-700 hover:text-teal-500 font-medium transition-colors cursor-pointer">Why Choose Us?</a>
           </div>
 
@@ -122,7 +122,7 @@ const Navbar = () => {
             <a href="/" onClick={(e) => handleNavClick(e)} className="block py-2 text-gray-700 hover:text-teal-500 font-medium cursor-pointer">Home</a>
             <a href="/#about" onClick={(e) => handleNavClick(e, 'about')} className="block py-2 text-gray-700 hover:text-teal-500 font-medium cursor-pointer">About Us</a>
             <a href="/#services" onClick={(e) => handleNavClick(e, 'services')} className="block py-2 text-gray-700 hover:text-teal-500 font-medium cursor-pointer">Services</a>
-            <a href="/#projects" onClick={(e) => handleNavClick(e, 'projects')} className="block py-2 text-gray-700 hover:text-teal-500 font-medium cursor-pointer">Projects</a>
+            <Link to="/projects" className="block py-2 text-gray-700 hover:text-teal-500 font-medium" onClick={() => setIsMenuOpen(false)}>Projects</Link>
             <a href="/#whyChooseUs" onClick={(e) => handleNavClick(e, 'whyChooseUs')} className="block py-2 text-gray-700 hover:text-teal-500 font-medium cursor-pointer">Why Choose Us?</a>
             <a href="/#appointment" onClick={(e) => handleNavClick(e, 'appointment')} className="block py-3 px-4 bg-teal-500 text-white font-medium rounded-md text-center cursor-pointer">
               Get a Free Quote

@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Env files (use .env.example as template; set VITE_R2_PUBLIC_URL locally)
+.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

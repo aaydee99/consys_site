@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Check, ChevronRight, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -80,10 +80,10 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
+                <Link to="/projects" className="text-gray-400 hover:text-teal-300 transition-colors flex items-center">
                   <ChevronRight size={16} className="mr-2" />
                   <span>Our Projects</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

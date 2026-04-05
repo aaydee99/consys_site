@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, Calendar, Tag, ChevronRight } from 'lucide-react';
 import { projects } from '@/data/projects';
+import { getProjectGallery } from '@/data/projectMedia';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cn } from '@/lib/utils';
@@ -26,6 +27,7 @@ const ProjectDetail = () => {
 
   const project = projects.find((p) => p.id === id);
   const currentIndex = projects.findIndex((p) => p.id === id);
+  const gallery = project ? getProjectGallery(project.id) : undefined;
 
   // Get related projects (same category, excluding current)
   const relatedProjects = project
@@ -50,10 +52,10 @@ const ProjectDetail = () => {
         <div className="pt-48 pb-20 text-center">
           <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
           <p className="text-gray-600 mb-8">The project you're looking for doesn't exist.</p>
-          <a href="/#projects" onClick={(e) => navigateToHomeSection(e, 'projects')} className="btn-primary inline-flex items-center cursor-pointer">
+          <Link to="/projects" className="btn-primary inline-flex items-center cursor-pointer">
             <ArrowLeft size={16} className="mr-2" />
             Back to Projects
-          </a>
+          </Link>
         </div>
         <Footer />
       </div>
@@ -84,9 +86,9 @@ const ProjectDetail = () => {
                 Home
               </Link>
               <ChevronRight size={14} className="mx-2" />
-              <a href="/#projects" onClick={(e) => navigateToHomeSection(e, 'projects')} className="hover:text-teal-300 transition-colors cursor-pointer">
+              <Link to="/projects" className="hover:text-teal-300 transition-colors">
                 Projects
-              </a>
+              </Link>
               <ChevronRight size={14} className="mx-2" />
               <span className="text-white">{project.title}</span>
             </nav>
@@ -120,13 +122,15 @@ const ProjectDetail = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
               {/* Main Content */}
               <div className="lg:col-span-2">
-                <div className="rounded-xl overflow-hidden mb-8 shadow-lg">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-[400px] object-cover"
-                  />
-                </div>
+                {!gallery && (
+                  <div className="rounded-xl overflow-hidden mb-8 shadow-lg">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-[400px] object-cover"
+                    />
+                  </div>
+                )}
 
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">Project Overview</h2>
                 <p className="text-gray-700 text-lg leading-relaxed mb-8">
@@ -142,6 +146,51 @@ const ProjectDetail = () => {
                     through to execution and handover.
                   </p>
                 </div>
+
+                {gallery && (
+                  <div className="mb-10 space-y-4">
+                    <h2 className="text-2xl md:text-3xl font-bold">Project photos</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {gallery.images.map((src, i) => (
+                        <div
+                          key={`${project.id}-img-${i}`}
+                          className="rounded-xl overflow-hidden shadow-md bg-gray-100"
+                        >
+                          <img
+                            src={src}
+                            alt={`${project.title} — photo ${i + 1}`}
+                            className="w-full h-full min-h-[200px] max-h-[420px] object-cover"
+                            loading={i < 4 ? 'eager' : 'lazy'}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {gallery && gallery.videos.length > 0 && (
+                  <div className="mb-10">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">Project videos</h2>
+                    <div className="space-y-8">
+                      {gallery.videos.map((src, i) => (
+                        <div
+                          key={`${project.id}-vid-${i}`}
+                          className="rounded-xl overflow-hidden shadow-md bg-black aspect-video"
+                        >
+                          <video
+                            className="w-full h-full object-contain"
+                            controls
+                            playsInline
+                            preload="metadata"
+                            title={`${project.title} — video ${i + 1}`}
+                          >
+                            <source src={src} type="video/mp4" />
+                          </video>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Prev / Next Navigation */}
                 <div className="flex justify-between items-center border-t border-b border-gray-200 py-6 mt-8">
@@ -227,14 +276,13 @@ const ProjectDetail = () => {
                 </div>
 
                 {/* Back to projects link */}
-                <a
-                  href="/#projects"
-                  onClick={(e) => navigateToHomeSection(e, 'projects')}
-                  className="flex items-center text-teal-600 hover:text-teal-700 font-medium transition-colors mb-6 cursor-pointer"
+                <Link
+                  to="/projects"
+                  className="flex items-center text-teal-600 hover:text-teal-700 font-medium transition-colors mb-6"
                 >
                   <ArrowLeft size={16} className="mr-2" />
                   Back to All Projects
-                </a>
+                </Link>
               </div>
             </div>
           </div>

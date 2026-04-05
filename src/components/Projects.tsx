@@ -2,16 +2,18 @@ import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { gsap } from 'gsap';
-import { projects, categories } from '@/data/projects';
+import { highlightProjects } from '@/data/projects';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [filteredProjects, setFilteredProjects] = useState(projects);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-  const scrollerRef = useRef(null);
-  const animationRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,141 +36,80 @@ const Projects = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (activeCategory === 'All') {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(projects.filter(project => project.category === activeCategory));
-    }
-  }, [activeCategory]);
-
-  // GSAP Infinite Scroll Animation
-  useEffect(() => {
-    if (!scrollerRef.current || !isVisible) return;
-
-    // Calculate the total width of the original set of projects
-    const cardWidth = 300; // Width of each card (w-[300px])
-    const gap = 24; // Tailwind's space-x-6 (6 * 4px = 24px)
-    const totalCards = filteredProjects.length;
-    const totalWidth = totalCards * (cardWidth + gap) - gap; // Total width of one set of cards
-
-    // Set initial position
-    gsap.set(scrollerRef.current, { x: 0 });
-
-    // Create the infinite scroll animation
-    animationRef.current = gsap.to(scrollerRef.current, {
-      x: -totalWidth, // Move to the left by the total width of one set
-      duration: totalCards * 4, // Adjust duration based on number of cards (1s per card)
-      ease: 'none', // Linear animation for constant speed
-      repeat: -1, // Infinite repeat
-      modifiers: {
-        x: gsap.utils.unitize((x) => {
-          // Modulo to loop back to the start
-          return parseFloat(x) % totalWidth;
-        })
-      }
-    });
-
-    return () => {
-      // Clean up the animation on unmount or when filteredProjects changes
-      if (animationRef.current) {
-        animationRef.current.kill();
-      }
-    };
-  }, [filteredProjects, isVisible]);
-
-  // Handle hover to pause/resume animation
-  const handleMouseEnter = () => {
-    if (animationRef.current) {
-      animationRef.current.pause();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (animationRef.current) {
-      animationRef.current.resume();
-    }
-  };
-
-  // Duplicate the projects to create a seamless loop
-  const duplicatedProjects = [...filteredProjects, ...filteredProjects];
-
-  const visibleCategories = categories.filter(category => {
-    if (category === 'All') return true; // Always show "All" category
-    return projects.some(project => project.category === category);
-  });
-
   return (
     <section id="projects" className="py-20 bg-white" ref={sectionRef}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <span className="section-tag">Our Portfolio</span>
-          <h2 className="section-title">Recent Projects</h2>
+          <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle">
-            Explore our portfolio of successful projects across the UAE and Pakistan
+            A selection of recent highlights — explore the full portfolio on our projects page.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center mb-10 gap-2">
-          {visibleCategories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
-                activeCategory === category
-                  ? "bg-teal-500 text-white"
-                  : "bg-gray-100 text-gray-800 hover:bg-gray-200"
-              )}
-            >
-              {category}
-            </button>
-          ))}
+        <div
+          className={cn(
+            'relative max-w-6xl mx-auto transition-opacity duration-500',
+            isVisible ? 'opacity-100' : 'opacity-0'
+          )}
+        >
+          <Carousel
+            opts={{ align: 'start', loop: true }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {highlightProjects.map((project) => (
+                <CarouselItem
+                  key={project.id}
+                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                >
+                  <Link
+                    to={`/project/${project.id}`}
+                    className="glass-card hover-card overflow-hidden flex flex-col h-full min-h-[420px] transition-transform duration-300 block"
+                  >
+                    <div className="h-48 overflow-hidden shrink-0">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </div>
+                    <div className="p-4 flex flex-col flex-1">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-xs font-medium text-teal-600 bg-teal-50 px-2 py-1 rounded">
+                          {project.category}
+                        </span>
+                        <span className="text-xs text-gray-500">{project.year}</span>
+                      </div>
+                      <h3 className="text-lg font-bold mb-2 line-clamp-2">{project.title}</h3>
+                      <p className="text-gray-600 text-sm mb-3 line-clamp-3 flex-1">
+                        {project.description}
+                      </p>
+                      <span className="inline-flex items-center text-teal-600 font-medium text-sm group mt-auto">
+                        View Details
+                        <ArrowRight
+                          size={14}
+                          className="ml-1 transition-transform group-hover:translate-x-1"
+                        />
+                      </span>
+                    </div>
+                  </Link>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 sm:-left-4 border-teal-200 text-teal-700 hover:bg-teal-50" />
+            <CarouselNext className="right-0 sm:-right-4 border-teal-200 text-teal-700 hover:bg-teal-50" />
+          </Carousel>
         </div>
 
-        {/* Infinite scrolling container */}
-        <div className="overflow-hidden">
-          <div
-            ref={scrollerRef}
-            className="flex space-x-6"
-            style={{ minWidth: 'max-content' }}
+        <div className="text-center mt-12">
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 btn-primary px-8 py-3 rounded-md font-medium"
           >
-            {duplicatedProjects.map((project, index) => (
-              <Link
-                to={`/project/${project.id}`}
-                key={`${project.id}-${index}`}
-                className={cn(
-                  "glass-card hover-card overflow-hidden flex-shrink-0 w-[300px] transition-transform duration-300 block",
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                )}
-                style={{ transitionDelay: `${index * 100}ms` }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs font-medium text-teal-600 bg-teal-50 px-2 py-1 rounded">
-                      {project.category}
-                    </span>
-                    <span className="text-xs text-gray-500">{project.year}</span>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 line-clamp-2">{project.title}</h3>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-3">{project.description}</p>
-                  <span className="inline-flex items-center text-teal-600 font-medium text-sm group">
-                    View Details
-                    <ArrowRight size={14} className="ml-1 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+            View all projects
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </section>
